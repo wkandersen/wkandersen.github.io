@@ -1,0 +1,26 @@
+# Ignore temporary files
+*.tmp
+*.log
+
+# Ignore build directories
+build/
+dist/
+_site/
+
+# Ignore dependency directories
+node_modules/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE files
+.vscode/
+.idea/
+
+# Ignore Sass cache files
+.sass-cache/
+
+# Ignore generated files
+*.min.js
+*.min.css
