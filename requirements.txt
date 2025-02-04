@@ -230,3 +230,4 @@ wrapt
 zipp
 fastapi
 python-multipart
+uvicorn

@@ -22,7 +22,7 @@ data, _, class_names, _ = load_data()
 
 
 # Define the checkpoint path (update the checkpoint filename)
-checkpoint_path = os.path.abspath(r"python_api/best-model-epoch=04-val_loss=0.77.ckpt")
+checkpoint_path = os.path.abspath(r"best-model-epoch=04-val_loss=0.77.ckpt")
 
 # Load the model and checkpoint
 model = TimmModel.load_from_checkpoint(checkpoint_path, class_names = 23, num_features=3)  # PyTorch Lightning-specific
