@@ -231,3 +231,8 @@ zipp
 fastapi
 python-multipart
 uvicorn
+torch
+timm
+pytorch_lightning
+typing
+torchvision
