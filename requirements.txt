@@ -5,3 +5,8 @@ torch
 numpy
 pytorch-lightning
 timm
+torchvision
+kagglehub
+typing
+typer
+pandas

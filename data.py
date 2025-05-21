@@ -40,7 +40,10 @@ def load_data(dataset_path: Optional[str] = None) -> Tuple[pd.DataFrame, transfo
     for dirname, _, filenames in os.walk(dataset_path):
         for filename in filenames:
             if filename.endswith(('.png', '.jpg', '.jpeg')):
-                classes.append(dirname.split('/')[-1])
+                try: 
+                    classes.append(dirname.split('\\')[-1])
+                except:
+                    classes.append(dirname.split('/')[-1])
                 paths.append(os.path.join(dirname, filename))
 
     print(f"Found {len(paths)} image files.")
