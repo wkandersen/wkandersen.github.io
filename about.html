@@ -9,26 +9,64 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="skills.html">Skills</a></li>
-            </ul>
+            <div class="nav-container">
+                <h2 class="logo">William Kirk Andersen</h2>
+                <div class="theme-switch-wrapper">
+                <span class="theme-label">Dark</span>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="theme-label">Light</span>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <!-- <li><a href="skills.html">Skills</a></li> -->
+                </ul>
+            </div>
         </nav>
     </header>
-    <main>
-        <div class = container>
-        <h1>About Me</h1>
-        <p>Hi, my name is William and I am currently studying the BSc. Artificial Intelligence and Data
-            at the Technical University of Denmark on my 5th semester. I am very passionate about machine learning. Furthermore,
-            I am very engaged in the student life at DTU, where I am a part of the student council and was a tutor (vector)
-            for the new students starting on the BSc. Artificial Intelligence and Data. Since then, I have been elected as one of the 29  
-            Coordinator of the Studystart shortened as (KABS) at DTU for the coming year. Here, I have had the responsibility for hiring new tutors, 
-            planning the intro week and much more. This has developed my communication and leadership skills.
-        </p>
-        <img src="Pictures/kabsbillede.jpg" alt="About Me Image" class="about-image">
+    <main class="fade-in">
+        <div class="container about-card">
+            <h1>About Me</h1>
+            <p>Hi, my name is William and I am currently studying the BSc. Artificial Intelligence and Data
+                at the Technical University of Denmark on my 6th semester. I am very passionate about machine learning. Furthermore,
+                I am very engaged in the student life at DTU, where I am a part of the student council and was a tutor (vector)
+                for the new students starting on the BSc. Artificial Intelligence and Data. I was elected as one of the 29  
+                Coordinator of the Studystart shortened as (KABS) at DTU for new year of 2024. Here, I had the responsibility for hiring new tutors, 
+                planning the intro week and much more. This has developed my communication and leadership skills.
+            </p>
+            <img src="Pictures/kabsbillede.jpg" alt="About Me Image" class="about-image">
         </div>
     </main>
+
+
+
+
+<script>
+const toggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+// Apply saved theme
+if (localStorage.getItem('theme') === 'light') {
+    body.classList.add('light-mode');
+    toggle.checked = true;
+}
+
+// Toggle and save preference
+toggle.addEventListener('change', () => {
+    if (toggle.checked) {
+        body.classList.add('light-mode');
+        localStorage.setItem('theme', 'light');
+    } else {
+        body.classList.remove('light-mode');
+        localStorage.setItem('theme', 'dark');
+    }
+});
+</script>
+
+
 </body>
 </html>
