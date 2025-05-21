@@ -6,7 +6,7 @@ import torch
 import numpy as np
 from model import TimmModel  # Import the model architecture
 import io
-from data import load_data
+# from data import load_data
 
 
 # Initialize FastAPI app
@@ -18,7 +18,7 @@ app = FastAPI(
 
 
 # Get a list of class names
-data, _, class_names, _ = load_data()
+# data, _, class_names, _ = load_data()
 
 
 # Define the checkpoint path (update the checkpoint filename)

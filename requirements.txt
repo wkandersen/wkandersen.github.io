@@ -10,3 +10,4 @@ kagglehub
 typing
 typer
 pandas
+numpy
