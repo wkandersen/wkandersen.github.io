@@ -18,7 +18,7 @@ app = FastAPI(
 
 
 # Get a list of class names
-# data, _, class_names, _ = load_data()
+class_names = ['Clams', 'Corals', 'Crabs', 'Dolphin', 'Eel', 'Fish', 'Jelly Fish', 'Lobster', 'Nudibranchs', 'Octopus', 'Otter', 'Penguin', 'Puffers', 'Sea Rays', 'Sea Urchins', 'Seahorse', 'Seal', 'Sharks', 'Shrimp', 'Squid', 'Starfish', 'Turtle_Tortoise', 'Whale']
 
 
 # Define the checkpoint path (update the checkpoint filename)
