@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qualifications</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h2 class="logo">William Kirk Andersen</h2>
+                <div class="theme-switch-wrapper">
+                <span class="theme-label">Dark</span>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="theme-label">Light</span>
+                </div>
+                <ul>
+                    <li><a href="index">Home</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="experience">Experience</a></li>
+                    <li><a href="qualifications" class="active">Skills</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+<main class="fade-in">
+    <div class="container">
+        <h1>Qualifications & Skills</h1>
+        <div class="skills-list">
+            <div class="skill-card">
+                <button class="skill-title">Forklift Certification</button>
+                <div class="skill-details">
+                    <p>As part of my responsibilities in Føtex to receive goods before the shop opened, I completed a forklift certification and am therefore eligible to drive a forklift truck.</p>
+                </div>
+            </div>
+            <div class="skill-card">
+                <button class="skill-title">Python</button>
+                <div class="skill-details">
+                    <p>I have used Python since I started at DTU and therefore have 2 years of experience using this language and common libraries. 
+                    </p>
+                    <p>Here are some of the libraries I have experience in: <ul class="dotted-list">
+                    <li>Pytorch</li>
+                    <li>Sci-kit learn</li>
+                    <li>Tensorflow</li>
+                    </ul></p>
+                </div>
+            </div>
+            <div class="skill-card">
+                <button class="skill-title">C++</button>
+                <div class="skill-details">
+                    <p>I have completed an introductory course on C++.</p>
+                </div>
+            </div>
+            <div class="skill-card">
+                <button class="skill-title">SQL (Database)</button>
+                <div class="skill-details">
+                    <p>I have completed a course on Database Systems and the use of SQL.</p>
+                </div> 
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+document.querySelectorAll('.skill-title').forEach(button => {
+    button.addEventListener('click', () => {
+        const card = button.parentElement;
+        card.classList.toggle('open');
+    });
+});
+</script>
+
+<script>
+const toggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+// Apply saved theme
+if (localStorage.getItem('theme') === 'light') {
+    body.classList.add('light-mode');
+    toggle.checked = true;
+}
+
+// Toggle and save preference
+toggle.addEventListener('change', () => {
+    if (toggle.checked) {
+        body.classList.add('light-mode');
+        localStorage.setItem('theme', 'light');
+    } else {
+        body.classList.remove('light-mode');
+        localStorage.setItem('theme', 'dark');
+    }
+});
+</script>
+
+</body>
+</html>
